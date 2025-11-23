@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arfin — Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         :root {
+            --accent: #0ea5a4;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(6px);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-gradient-to-b from-black/60 to-transparent border-b border-white/5">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4 md:p-6">
+            <a href="#home" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[var(--accent)] flex items-center justify-center font-bold text-black">AS</div>
+                <span class="ml-1 font-semibold">Arfin Sami</span>
+            </a>
+            <nav class="hidden md:flex gap-6 items-center text-sm">
+                <a href="home.html" class="hover:underline">Home</a>
+                <a href="skills.html" class="hover:underline">Skills</a>
+                <a href="services.html" class="hover:underline">Services</a>
+                <a href="work.html" class="hover:underline">Work</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+                <a href="about.html" class="hover:underline">About</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="navToggler" class="p-2 rounded-md glass">Menu</button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-black/60 border-t border-white/5">
+            <div class="flex flex-col gap-2 p-4">
+                <a href="home.html" class="py-2 px-3 rounded hover:bg-white/5">Home</a>
+                <a href="skills.html" class="py-2 px-3 rounded hover:bg-white/5">Skills</a>
+                <a href="services.html" class="py-2 px-3 rounded hover:bg-white/5">Services</a>
+                <a href="work.html" class="py-2 px-3 rounded hover:bg-white/5">Work</a>
+                <a href="contact.html" class="py-2 px-3 rounded hover:bg-white/5">Contact</a>
+                <a href="about.html" class="py-2 px-3 rounded hover:bg-white/5">About</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home / Hero -->
+    <section id="home" class="max-w-6xl mx-auto p-6 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">I build clean, thoughtful web experiences.</h1>
+            <p class="mt-4 text-gray-300 max-w-prose">Hi — I'm Arfin. I design and develop responsive websites and web apps with focus on accessibility and performance.</p>
+            <div class="mt-6 flex gap-3">
+                <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--accent)] text-black font-medium">Hire me</a>
+                <a href="#work" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10">See my work</a>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3 text-sm text-gray-400">
+                <div class="glass px-3 py-2 rounded">Available for remote work</div>
+                <div class="glass px-3 py-2 rounded">Open to internships</div>
+            </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="relative">
+            <div id="slides" class="overflow-hidden rounded-2xl border border-white/5">
+                <div class="flex w-[200%] transition-transform duration-700" style="transform:translateX(0)">
+                    <div class="w-full p-8 bg-gradient-to-tr from-slate-800 to-slate-900">
+                        <h3 class="text-xl font-semibold">Featured Project — Portfolio UI</h3>
+                        <p class="mt-2 text-gray-300">A responsive single-page portfolio with a focus on typography and layout. Built with semantic HTML and minimal JS.</p>
+                        <div class="mt-4 text-sm text-gray-400">Tools: HTML, CSS, Tailwind, JS</div>
+                    </div>
+                    <div class="w-full p-8 bg-gradient-to-tr from-slate-800 to-slate-900">
+                        <h3 class="text-xl font-semibold">Featured Project — E-commerce mock</h3>
+                        <p class="mt-2 text-gray-300">Design and interaction for a small e-commerce flow with cart micro-interactions and mobile-first design.</p>
+                        <div class="mt-4 text-sm text-gray-400">Tools: HTML, CSS, JS</div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute left-4 bottom-4 flex items-center gap-2">
+                <button id="prev" class="glass p-2 rounded">◀</button>
+                <button id="next" class="glass p-2 rounded">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold  text-center">Skills</h2>
+        <p class="text-gray-400 mt-2 text-center">A few tools and technologies I use regularly.</p>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-4 rounded-lg glass">
+                <h4 class="font-semibold">HTML & CSS</h4>
+                <div class="mt-3 text-sm text-gray-300">Semantic markup, responsive layouts</div>
+            </div>
+            <div class="p-4 rounded-lg glass">
+                <h4 class="font-semibold">JavaScript</h4>
+                <div class="mt-3 text-sm text-gray-300">DOM, fetch, interactivity</div>
+            </div>
+            <div class="p-4 rounded-lg glass">
+                <h4 class="font-semibold">Tailwind CSS</h4>
+                <div class="mt-3 text-sm text-gray-300">Utility-first styling</div>
+            </div>
+            <div class="p-4 rounded-lg glass">
+                <h4 class="font-semibold">Version Control</h4>
+                <div class="mt-3 text-sm text-gray-300">Git, GitHub basics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold text-center">Services</h2>
+        <p class="text-gray-400 mt-2 text-center">What I can help you with.</p>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-white/3 border border-white/5">
+                <h3 class="font-semibold">Website Development</h3>
+                <p class="mt-2 text-sm text-gray-300">Responsive websites, performance-focused, accessible.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/3 border border-white/5">
+                <h3 class="font-semibold">UI Design</h3>
+                <p class="mt-2 text-sm text-gray-300">Design systems, prototypes, interaction patterns.</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-white/3 border border-white/5">
+                <h3 class="font-semibold">Consulting</h3>
+                <p class="mt-2 text-sm text-gray-300">Code reviews, accessibility audits, performance tuning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold text-center">Work Experience</h2>
+        <div class="mt-6 space-y-4">
+            <article class="p-4 rounded-lg glass">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="font-semibold">Frontend Developer — XYZ Studio</h3>
+                        <div class="text-sm text-gray-400">N/A</div>
+                    </div>
+                    <div class="text-sm text-gray-400">Remote</div>
+                </div>
+                <p class="mt-3 text-gray-300 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat quis reprehenderit perferendis voluptate facere deserunt illum ex earum, velit fugiat, ab ducimus tempora id, a possimus soluta natus sed./p>
+            </article>
+            <article class="p-4 rounded-lg glass">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="font-semibold">Intern — Web Labs</h3>
+                        <div class="text-sm text-gray-400">N/A</div>
+                    </div>
+                    <div class="text-sm text-gray-400">On-site</div>
+                </div>
+                <p class="mt-3 text-gray-300 text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore quia labore reiciendis saepe quisquam ipsum quam recusandae, error voluptate accusamus laborum pariatur eum neque? Tempore consequatur necessitatibus rem beatae repellat?.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold text-center">Contact</h2>
+        <p class="text-gray-400 mt-2 text-center">Interested in working together? Send a short message.</p>
+        <form class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="handleForm(event)">
+            <input required name="name" placeholder="Your name" class="p-3 rounded bg-white/5 border border-white/6" />
+            <input required name="email" type="email" placeholder="Email" class="p-3 rounded bg-white/5 border border-white/6" />
+            <input name="subject" placeholder="Subject" class="p-3 rounded bg-white/5 border border-white/6 md:col-span-2" />
+            <textarea required name="message" placeholder="Message" rows="5" class="p-3 rounded bg-white/5 border border-white/6 md:col-span-2"></textarea>
+            <div class="md:col-span-2 flex gap-3">
+                <button type="submit" class="px-4 py-2 bg-[var(--accent)] text-black rounded-lg">Send message</button>
+                <button type="reset" class="px-4 py-2 border border-white/10 rounded-lg">Reset</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold  text-center">About Me</h2>
+        <p class="text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur porro nisi voluptatum aliquid deserunt tempore in sit sequi vero! Reiciendis nulla minus ducimus, fugit quo amet? Aperiam ipsa impedit rerum. Qui maxime dolor quasi, nesciunt
+            provident perspiciatis possimus sit rem, doloribus esse iusto deserunt dicta! Cupiditate eaque possimus repellendus velit adipisci nesciunt, omnis, incidunt facilis earum animi eius quidem accusantium. Fugit corrupti, doloremque provident
+            vero architecto at perspiciatis ipsa est animi! Atque, amet saepe sapiente sint optio iusto iste velit tenetur, explicabo in expedita similique. Ut, pariatur? Hic, saepe alias. Temporibus iste accusamus numquam ipsa consequatur, officiis tempore
+            reprehenderit incidunt minus possimus non nulla. Debitis deleniti eius ea nemo dolorem vitae? Molestiae vero quibusdam nesciunt, consequatur delectus fugit? Dignissimos, delectus? Quas enim eaque odio quaerat quae adipisci nisi, est cupiditate
+            doloremque architecto ducimus alias dolores, distinctio rerum ex exercitationem aliquid consectetur ratione libero beatae fuga minima atque! Veniam, error earum..</p>
+        <p class="text-gray-300 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit excepturi aliquam vero, optio sint esse consequuntur praesentium, et blanditiis commodi harum dolor illum. Recusandae amet, quae ut labore tempora sunt.</p>
+        <p class="text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nobis dolorem voluptates, nostrum tempora voluptate reiciendis minima dolore laboriosam alias numquam ab architecto. Iste cumque aut tenetur doloremque, porro ducimus!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto p-6 md:p-12 text-sm text-gray-400 border-t border-white/5">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <div>© <span id="year"></span> Arfin Sami. All rights reserved.</div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            var m = document.getElementById('mobileMenu');
+            m.classList.toggle('hidden');
+        }
+        document.getElementById('navToggler').onclick = toggleMenu;
+
+        // Simple slider
+        var slides = [0, 1],
+            index = 0;
+
+        function showSlide(i) {
+            index = i < 0 ? slides.length - 1 : i >= slides.length ? 0 : i;
+            document.querySelector('#slides > div').style.transform = 'translateX(-' + (index * 100) + '%)';
+        }
+        document.getElementById('next').onclick = () => showSlide(index + 1);
+        document.getElementById('prev').onclick = () => showSlide(index - 1);
+
+        // Contact form demo
+        function handleForm(e) {
+            e.preventDefault();
+            alert('Thanks ' + e.target.name.value + ' — message received.');
+            e.target.reset();
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

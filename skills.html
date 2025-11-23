@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         :root {
+            --accent: #0ea5a4
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(6px)
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 antialiased leading-relaxed">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-gradient-to-b from-black/60 to-transparent border-b border-white/5">
+        <div class="max-w-6xl mx-auto flex items-center justify-between p-4 md:p-6">
+            <a href="home.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[var(--accent)] flex items-center justify-center font-bold text-black">AS</div><span class="ml-1 font-semibold">Arfin Sami</span></a>
+            <nav class="hidden md:flex gap-6 items-center text-sm">
+                <a href="home.html" class="hover:underline">Home</a>
+                <a href="skills.html" class="hover:underline">Skills</a>
+                <a href="services.html" class="hover:underline">Services</a>
+                <a href="work.html" class="hover:underline">Work</a>
+                <a href="contact.html" class="hover:underline">Contact</a>
+                <a href="about.html" class="hover:underline">About</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="navToggler" class="p-2 rounded-md glass">Menu</button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-black/60 border-t border-white/5">
+            <div class="flex flex-col gap-2 p-4">
+                <a href="home.html" class="py-2 px-3 rounded hover:bg-white/5">Home</a>
+                <a href="skills.html" class="py-2 px-3 rounded hover:bg-white/5">Skills</a>
+                <a href="services.html" class="py-2 px-3 rounded hover:bg-white/5">Services</a>
+                <a href="work.html" class="py-2 px-3 rounded hover:bg-white/5">Work</a>
+                <a href="contact.html" class="py-2 px-3 rounded hover:bg-white/5">Contact</a>
+                <a href="about.html" class="py-2 px-3 rounded hover:bg-white/5">About</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Content -->
+    <section class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-2xl font-bold text-center ">Skills</h2>
+        <p class="text-gray-400 mt-2 text-center ">Detailed view of my technical skills and proficiencies.</p>
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">HTML & CSS</h3>
+                <p class="mt-2 text-gray-300 text-sm">Semantic markup, responsive layouts, Flexbox, Grid.</p>
+            </div>
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">JavaScript</h3>
+                <p class="mt-2 text-gray-300 text-sm">DOM manipulation, ES6+, fetch API, events.</p>
+            </div>
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">Tailwind CSS</h3>
+                <p class="mt-2 text-gray-300 text-sm">Utility-first styling, responsive design, custom components.</p>
+            </div>
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">Version Control</h3>
+                <p class="mt-2 text-gray-300 text-sm">Git, GitHub, branching strategies, commits.</p>
+            </div>
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">UI/UX Design</h3>
+                <p class="mt-2 text-gray-300 text-sm">Wireframes, prototyping, accessibility, user flows.</p>
+            </div>
+            <div class="p-6 rounded-lg glass">
+                <h3 class="font-semibold">Other Tools</h3>
+                <p class="mt-2 text-gray-300 text-sm">VS Code, Chrome DevTools, Figma, Notion.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-6xl mx-auto p-6 md:p-12 text-sm text-gray-400 border-t border-white/5">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+            <div>© <span id="year"></span> Arfin Sami. All rights reserved.</div>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            var m = document.getElementById('mobileMenu');
+            if (m.classList.contains('hidden')) {
+                m.classList.remove('hidden')
+            } else {
+                m.classList.add('hidden')
+            }
+        }
+        document.getElementById('navToggler').onclick = toggleMenu;
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
